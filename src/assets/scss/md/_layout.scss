@@ -1,0 +1,69 @@
+.md-layout-item{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .typo-line {
+        position: relative;
+        padding-left: 140px;
+        margin-bottom: 40px;
+    }
+    .typo-line .category {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    .sidebar .nav>li.active-pro {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.places-buttons .btn {
+    margin-bottom: 30px
+}
+
+.space-70 {
+    display: block;
+    height: 70px;
+}
+
+.tim-row {
+    margin-bottom: 20px;
+}
+
+.tim-typo {
+    position: relative;
+    padding-left: 25%;
+    margin-bottom: 40px;
+}
+
+.tim-typo .tim-note {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: block;
+    width: 260px;
+    margin-left: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
+    color: #c0c1c2;
+}
+
+.tim-row {
+    padding-top: 50px;
+}
+
+.tim-row h3 {
+    margin-top: 0;
+}

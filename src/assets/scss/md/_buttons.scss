@@ -1,0 +1,220 @@
+.md-button{
+    position: relative;
+    height: auto;
+    margin: 10px 1px;
+    font-size: $mdb-btn-font-size-base;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    border: none;
+    border-radius: $border-radius-base;
+    transition: box-shadow 0.2s $mdb-animation-curve-fast-out-linear-in,
+    background-color 0.2s $mdb-animation-curve-default;
+    will-change: box-shadow, transform;
+
+    &:not(.md-just-icon):not(.md-btn-fab):not(.md-icon-button):not(.md-toolbar-toggle) .md-ripple{
+      padding: 12px 30px;
+    }
+
+    &:not(.md-just-icon) .md-button-content i{
+      height: 17px;
+      font-size: 1.1rem !important;
+    }
+
+    &.md-wd{
+      min-width: 140px;
+    }
+
+    &.md-block{
+      width: 100%;
+    }
+
+    &::before{
+      display: none;
+    }
+
+    &,
+    &.md-default{
+        @include btn-styles($gray-light);
+    }
+
+    &.md-primary{
+      @include btn-styles($brand-primary);
+    }
+    &.md-info{
+      @include btn-styles($brand-info);
+    }
+    &.md-success{
+      @include btn-styles($brand-success);
+    }
+    &.md-warning{
+      @include btn-styles($brand-warning);
+    }
+    &.md-danger{
+      @include btn-styles($brand-danger);
+    }
+    &.md-white{
+        &,
+        &:focus,
+        &:hover{
+            color: $gray-light;
+            background-color: $white-color;
+        }
+        &.btn-simple{
+            color: #FFF;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+
+    &:focus,
+    &:active,
+    &:active:focus{
+      outline: 0;
+    }
+
+    &.md-round{
+      border-radius: $border-radius-extreme;
+    }
+
+    &:not(.btn-just-icon):not(.btn-fab){
+      .fa{
+          position: relative;
+          top: 2px;
+          margin-top: -2px;
+          font-size: 18px;
+      }
+    }
+
+
+    &.btn-fab {
+        position: relative;
+        width: $mdb-btn-fab-size;
+        min-width: $mdb-btn-fab-size;
+        height: $mdb-btn-fab-size;
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+        font-size: $mdb-btn-fab-font-size;
+        line-height: normal;
+        // see above for color variations
+        border-radius: 50%;
+
+        .ripple-container {
+          border-radius: 50%;
+        }
+
+        &.btn-fab-mini,
+        .btn-group-sm & {
+            width: $mdb-btn-fab-size-mini;
+            min-width: $mdb-btn-fab-size-mini;
+            height: $mdb-btn-fab-size-mini;
+
+            &.material-icons {
+                top: ($mdb-btn-icon-size-mini - $mdb-btn-fab-font-size) / 2;
+                left: ($mdb-btn-icon-size-mini - $mdb-btn-fab-font-size) / 2;
+            }
+
+            .material-icons{
+                font-size: $mdb-btn-icon-size-mini;
+            }
+        }
+
+        i.material-icons {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: $mdb-btn-fab-font-size;
+          font-size: $mdb-btn-fab-font-size;
+          line-height: $mdb-btn-fab-font-size;
+          transform: translate(-($mdb-btn-fab-font-size / 2), -($mdb-btn-fab-font-size / 2));
+        }
+    }
+
+    // Size variations
+    &.md-lg .md-ripple{
+        padding: 18px 36px !important;
+        font-size: $mdb-btn-font-size-lg;
+    }
+    &.md-sm .md-ripple{
+        padding: 0.40625rem 1.25rem !important;
+        font-size: $mdb-btn-font-size-sm;
+    }
+
+    &.btn-just-icon{
+        padding: 12px 12px;
+        font-size: 20px;
+        line-height: 1em;
+
+        i{
+            width: 20px;
+        }
+        &.btn-lg{
+            padding: 13px 18px;
+            font-size: 22px;
+        }
+    }
+
+    &.md-fab,
+    &.md-just-icon{
+      position: relative;
+      width: 41px;
+      min-width: 41px;
+      height: 41px;
+      padding: 0;
+      overflow: hidden;
+      font-size: 24px;
+      line-height: 41px;
+      border-radius: 50%;
+    }
+
+    .md-button-content{
+      display: flex;
+      align-items: center;
+      i{
+        font-size: 20px !important;
+      }
+    }
+}
+
+.btn{
+    // Align icons inside buttons with text
+    .material-icons{
+        position: relative;
+        top: -1px;
+        font-size: $mdb-btn-icon-size-mini;
+        vertical-align: middle;
+    }
+
+}
+
+.navbar .navbar-nav > li > {
+    a.btn{
+        margin-top: 2px;
+        margin-bottom: 2px;
+
+        &.btn-fab{
+            margin: 5px 2px;
+        }
+    }
+    a:not(.btn){
+        .material-icons{
+            position: relative;
+            top: 0;
+            margin-top: -3px;
+            margin-right: 3px;
+        }
+    }
+    .profile-photo{
+        margin: 5px 2px;
+    }
+}
+
+.navbar-default:not(.navbar-transparent) .navbar-nav > li > {
+    a.btn{
+        &.btn-white.btn-simple{
+            color: $gray;
+        }
+    }
+}

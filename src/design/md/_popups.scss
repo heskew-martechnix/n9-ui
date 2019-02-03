@@ -1,0 +1,57 @@
+.md-tooltip{
+  min-width: 130px;
+  max-width: 200px;
+  height: auto;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $gray !important;
+  text-align: center;
+  background-color: $white-color !important;
+  border-radius: $border-radius-base;
+
+  @include shadow-8dp();
+
+  &::after{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    width: 5px;
+    height: 0;
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: .255em;
+    content: "";
+  }
+
+  &[x-placement="top"]::after{
+    border-top: 5px solid $white-color;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    border-left: 5px solid transparent;
+  }
+  &[x-placement="bottom"]::after{
+    top: -5px;
+    border-top: 0;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $white-color;
+    border-left: 5px solid transparent;
+  }
+  &[x-placement="left"]::after{
+    top: 16px;
+    right: -5px;
+    margin-right: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $white-color;
+  }
+  &[x-placement="right"]::after{
+    top: 16px;
+    left: -5px;
+    margin-left: 0;
+    border-top: 5px solid transparent;
+    border-right: 5px solid $white-color;
+    border-bottom: 5px solid transparent;
+  }
+}

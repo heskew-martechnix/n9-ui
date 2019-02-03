@@ -1,10 +1,41 @@
 import store from '@state/store'
+import EloquaFieldComparison from '@components/eloqua/eloqua-field-comparison.vue'
+import SimpleTable from '@components/tables/simple-table.vue'
+import NavTabsTable from '@components/tables/nav-tabs-table.vue'
+import OrderedTable from '@components/tables/ordered-table.vue'
 
 export default [
   {
     path: '/',
     name: 'home',
     component: () => lazyLoadView(import('@views/home')),
+    children: [
+      {
+        path: 'eloquafieldcomparison',
+        name: 'Eloqua Field Comparison',
+        component: EloquaFieldComparison,
+      },
+      {
+        path: 'page2',
+        name: 'Page 2',
+        component: NavTabsTable,
+      },
+      {
+        path: 'page3',
+        name: 'Page 3',
+        component: SimpleTable,
+      },
+      {
+        path: 'page4',
+        name: 'Page 4',
+        component: OrderedTable,
+      },
+    ],
+  },
+  {
+    path: '/eloquafieldcomparison2',
+    name: 'Eloqua Field Comparison',
+    component: EloquaFieldComparison,
   },
   {
     path: '/login',
@@ -89,6 +120,11 @@ export default [
   {
     path: '*',
     redirect: '404',
+  },
+  {
+    path: '/callback-landing',
+    name: 'CallbackLanding',
+    component: () => lazyLoadView(import('@components/auth/callback-landing')),
   },
 ]
 

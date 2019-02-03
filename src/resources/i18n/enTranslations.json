@@ -1,0 +1,16 @@
+{
+  "components": {
+    "sideBar": {
+      "title": "Martechnix"
+    },
+    "Account": {
+      "Title": "Account Settings"
+    },
+    "eloquaFieldComparison": {
+      "appName": "Field Comparison",
+      "field1": "Please choose the first field to compare",
+      "field2": "Please choose the second field to compare",
+      "ignoreLeadingSpaces": "Ignore any leading and trailing spaces?"
+    }
+  }
+}

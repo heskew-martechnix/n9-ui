@@ -9,6 +9,7 @@ module.exports = {
     resolve: {
       alias: require('./aliases.config').webpack,
     },
+    devtool: 'source-map',
   },
   css: {
     // Enable CSS source maps.

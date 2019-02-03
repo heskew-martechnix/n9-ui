@@ -1,0 +1,56 @@
+footer{
+    padding: $padding-base 0;
+
+    nav,
+    .copyright{
+      display: inline-block;
+    }
+
+    ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+        li{
+            display: inline-block;
+
+            a{
+                position: relative;
+                display: block;
+                padding: $padding-base;
+                font-size: $mdb-btn-font-size-base;
+                font-weight: $font-weight-bold;
+                color: inherit !important;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: $border-radius-base;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        padding: 15px 0;
+        margin: 0;
+        .material-icons{
+            position: relative;
+            top: 3px;
+            font-size: 18px;
+        }
+    }
+
+    .btn{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 30px;
+}
